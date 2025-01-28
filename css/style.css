@@ -123,7 +123,8 @@ figure figcaption {
 	width: 300px;
 	position: fixed;
 	z-index: 1001;
-	background: linear-gradient(135deg, rgb(255, 221, 153), rgb(249, 191, 63));
+	/*! 																								 COLOR OF THE LEFT INFO BAR */
+	background: linear-gradient(135deg, rgb(150,201,244), rgb(63,162,246));
 	-webkit-transition: 0.5s;
 	-o-transition: 0.5s;
 	transition: 0.5s;
@@ -155,8 +156,8 @@ figure figcaption {
 	height: auto;
 }
 #colorlib-aside .author-img {
-	width: 150px;
-	height: 150px;
+	width: 250px;
+	height: 250px;
 	margin: 0 auto;
 	margin-bottom: 30px;
 	-webkit-border-radius: 50%;
@@ -540,6 +541,7 @@ body.offcanvas .colorlib-nav-toggle {
 .colorlib-profile,
 .colorlib-projects,
 .colorlib-education,
+.colorlib-publications,
 .colorlib-blogs,
 .colorlib-work,
 .colorlib-about,
@@ -813,12 +815,12 @@ body.offcanvas .colorlib-nav-toggle {
 	clear: both;
 }
 
-.timeline-centered:before {
+.timeline-centered:before { /* ! 																			Lineas de timelines*/
 	content: "";
 	position: absolute;
 	display: block;
 	width: 4px;
-	background: #f9bf3f;
+	background: rgb(150, 201, 244);
 	top: 20px;
 	bottom: 20px;
 	margin-left: 29px;
@@ -847,24 +849,24 @@ body.offcanvas .colorlib-nav-toggle {
 	-ms-border-radius: 50%;
 	border-radius: 50%;
 	text-align: center;
-	-moz-box-shadow: 0 0 0 5px #f2f3f7;
-	-webkit-box-shadow: 0 0 0 5px #f2f3f7;
-	box-shadow: 0 0 0 5px #f2f3f7;
+	-moz-box-shadow: 0 0 0 5px rgb(201, 229, 252);
+	-webkit-box-shadow: 0 0 0 5px rgb(201, 229, 252);
+	box-shadow: 0 0 0 5px rgb(201, 229, 252);
 	line-height: 40px;
 	float: left;
 }
 .timeline-centered
 	.timeline-entry
 	.timeline-entry-inner
-	.timeline-icon.color-2 {
-	background: brown;
+	.timeline-icon.color-2 { /* ! 																			Bolitas de timelines*/
+	background: rgb(15, 103, 177);
 	color: white;
 }
 .timeline-centered
 	.timeline-entry
 	.timeline-entry-inner
-	.timeline-icon.color-3 {
-	background: #f9bf3f;
+	.timeline-icon.color-3 { 
+	background: rgb(150, 201, 244);
 }
 .timeline-centered
 	.timeline-entry
@@ -890,7 +892,7 @@ body.offcanvas .colorlib-nav-toggle {
 
 .timeline-centered .timeline-entry .timeline-entry-inner .timeline-label {
 	position: relative;
-	background: linear-gradient(135deg, rgb(255, 221, 153), rgb(249, 191, 63));
+	background: linear-gradient(135deg, rgb(150,201,244), rgb(63,162,246));
 	color: #000;
 	padding: 1.5em;
 	margin-left: 60px;
@@ -908,7 +910,7 @@ body.offcanvas .colorlib-nav-toggle {
 	height: 0;
 	border-style: solid;
 	border-width: 9px 9px 9px 0;
-	border-color: transparent #f2f3f7 transparent transparent;
+	border-color: transparent rgb(201, 229, 252) transparent transparent;		/*! 					Triángulo de timeline */
 	left: 0;
 	top: 10px;
 	margin-left: -9px;
@@ -1957,9 +1959,24 @@ ul {
 }
 
 .project-heading {
-	font-weight: 600;
+	font-weight: 700;
 	margin-bottom: 10px;
 	color: #000;
+	margin-bottom: 2px;
+}
+
+.project-authors {
+	font-weight: 600;
+	font-style: italic;
+	margin-bottom: 10px;
+	color: #424242;
+	margin-bottom: 2px;
+}
+
+.project-conference {
+	font-weight: 100;
+	margin-bottom: 10px;
+	color: #8b8585;
 	margin-bottom: 2px;
 }
 
@@ -2030,8 +2047,10 @@ span {
 	}
 }
 
+
+/* ! 																							cuadradito al final de la pág */
 :root {
-	--footer-bg: linear-gradient(135deg, rgb(255, 221, 153), rgb(249, 191, 63));
+	--footer-bg: linear-gradient(135deg, rgb(150,201,244), rgb(63,162,246));
 	--color: #000;
 	--color-smooth: #000;
 	--input-border: #3a456a;
@@ -2120,8 +2139,9 @@ span {
     vertical-align: middle;
     white-space: nowrap;
     text-align: center;
-    background-color: brown !important;
+    background-color: #0F67B1 !important; 
     border-radius: 10px;
+	pointer-events: auto; /* Ensure links are interactive */
 }
 
 hr {
@@ -2194,6 +2214,10 @@ hr {
 
   .dark-mode {
 	strong {
-		color: #f9bf3f;
+		color: #3fcef9;
 	}
   }
+
+  .project-list li {
+    margin-bottom: 100px; /* Adjust the gap size as needed */
+}

@@ -3,7 +3,7 @@ import {
   skills,
   education,
   experience,
-  trekking,
+  supervision,
   footer,
 } from "./user-data/data.js";
 
@@ -98,8 +98,8 @@ function populateSkills(items, id) {
   });
 }
 
-function populateTrekking(items) {
-  const skillsTag = document.getElementById('trekking');
+function populateSupervision(items) {
+  const skillsTag = document.getElementById('supervision');
   items.forEach((item) => {
     const h3 = getElement("li", null);
     h3.innerHTML = item;
@@ -128,7 +128,7 @@ function populateBlogs(items, id) {
           border-radius: 12px;
           padding: 16px;
           font-size: 14px;
-          background: linear-gradient(135deg, rgb(255, 221, 153), rgb(249, 191, 63));
+          background: linear-gradient(135deg, rgb(15,103,177), rgb(63,162,246));
           box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
           min-height: 150px;
           cursor: pointer;
@@ -212,7 +212,7 @@ function populateRepo(items, id) {
           border-radius: 12px;
           padding: 16px;
           font-size: 14px;
-          background: linear-gradient(135deg, #ffdd99, #f9bf3f);
+          background: linear-gradient(135deg, rgb(15,103,177), rgb(63,162,246)));
           box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
           transition: transform 0.2s ease-in-out;
           cursor: pointer;
@@ -445,14 +445,14 @@ function getBlogDate(publishDate) {
 
 populateBio(bio, "bio");
 
-populateSkills(skills, "skills");
+// populateSkills(skills, "skills");
 
 fetchBlogsFromMedium(medium);
 fetchReposFromGit(gitRepo);
 fetchGitConnectedData(gitConnected);
 
-populateExp_Edu(experience, "experience");
-populateTrekking(trekking);
+// populateExp_Edu(experience, "experience");
+populateSupervision(supervision);
 populateExp_Edu(education, "education");
 
 populateLinks(footer, "footer");

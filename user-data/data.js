@@ -1,7 +1,8 @@
 export const bio = [
-  "Hello, I'm Vinay Somawat!",
-  "I’m a passionate and experienced <strong>Frontend Engineer</strong> specializing in developing dynamic web applications using Angular and React. I thrive on optimizing performance and delivering innovative, user-focused solutions.",
-  "Beyond coding, I enjoy traveling through the serene <strong>Himalayan mountains</strong> and experimenting with new recipes in the <strong>kitchen</strong>.",
+  // "Hi! I'm a PhD candidate in Computer Science at the Graphics and Imaging Lab",
+  // "I’m a passionate and experienced <strong>Frontend Engineer</strong> specializing in developing dynamic web applications using Angular and React. I thrive on optimizing performance and delivering innovative, user-focused solutions.",
+  // "Beyond coding, I enjoy traveling through the serene <strong>Himalayan mountains</strong> and experimenting with new recipes in the <strong>kitchen</strong>."
+  ,
 ];
 
 export const skills = [
@@ -78,19 +79,46 @@ export const experience = [
   },
 ];
 
-export const trekking = [
-  '<strong>Kheerganga Trek</strong>, Himachal Pradesh (9,711 feet)',
-  '<strong>Triund Trek</strong>, Himachal Pradesh (9,350 feet)',
-  '<strong>Kedarkantha Trek</strong>, Uttarakhand (12,500 feet)',
-  '<strong>Jalori Pass Trek</strong>, Himachal Pradesh (10,800 feet)',
-  '<strong>Vaishno Devi Trek</strong>, Jammu & Kashmir (5,200 feet)',
+export const supervision = [
+  '<strong>Name</strong>, Subject, year, etc',
 ];
 
 export const education = [
   {
-    title: "B.Tech. in Computer Science and Engineering",
-    duration: "2016 - 2020",
-    subtitle: "National Institute of Technology, Warangal",
+    title: "PhD Program in Computer Science",
+    duration: "2024 - Now",
+    subtitle: "University of Zaragoza, Spain",
+    details: [
+      // `jjjj`
+    ],
+    tags: [
+      "Material Appearance",
+      "Material Perception",
+      "Unsupervised Learning",
+      "Self-supervised Learning",
+      "Representation Learning",
+      "Denoising Diffusion Models",
+    ],
+    icon: "university",
+  },
+  {
+    title: "Master Program in Robotics, Graphics and Computer Vision",
+    duration: "2022 - 2024",
+    subtitle: "University of Zaragoza, Spain",
+    details: [],
+    tags: [
+      "Computer Vision",
+      "Machine Learning",
+      "Virtual Reality",
+      "Computational Imaging",
+      "SLAM"
+    ],
+    icon: "graduation-cap",
+  },
+  {
+    title: "Bachelor's Degree in Computer Science and Engineering",
+    duration: "2018 - 2022",
+    subtitle: "University of Zaragoza, Spain",
     details: [],
     tags: [
       "Data Structures & Algorithms",
@@ -98,18 +126,11 @@ export const education = [
       "Database Management System",
       "Computer Networks",
       "Compiler Designing",
-      "Cloud Computing",
+      "Bioinformatics",
+      "Artificial Intelligence"
     ],
     icon: "graduation-cap",
-  },
-  {
-    title: "Class 12th in Science and Mathematics",
-    duration: "",
-    subtitle: "Board of Secondary Education, Rajasthan",
-    details: [],
-    tags: ["Physics", "Chemistry", "Mathematics"],
-    icon: "book",
-  },
+  }
 ];
 
 export const footer = [
@@ -130,38 +151,38 @@ export const footer = [
   //       },
   //     ],
   //   },
-  //   {
-  //     label: "Resources",
-  //     data: [
-  //       {
-  //         text: "Enable Dark/Light Mode",
-  //         func: "enableDarkMode()",
-  //       },
-  //       {
-  //         text: "Print this page",
-  //         func: "window.print()",
-  //       },
-  //       {
-  //         text: "Clone this page",
-  //         link: "https://github.com/vinaysomawat/vinaysomawat.github.io",
-  //       },
-  //     ],
-  //   },
+    {
+      label: "Resources",
+      data: [
+        {
+          text: "Enable Dark/Light Mode",
+          func: "enableDarkMode()",
+        },
+        {
+          text: "Print this page",
+          func: "window.print()",
+        },
+        {
+          text: "Clone this page",
+          link: "https://github.com/vinaysomawat/vinaysomawat.github.io",
+        },
+      ],
+    },
   {
     label: "Links",
     data: [
-      //   {
-      //     text: "Linkedin",
-      //     link: "https://www.linkedin.com/in/vinaysomawat/",
-      //   },
-      //   {
-      //     text: "Twitter",
-      //     link: "https://twitter.com/thesigmakid",
-      //   },
-      {
-        text: "Buy me a coffee",
-        link: "https://www.buymeacoffee.com/r194dME8y",
-      },
+        {
+          text: "Linkedin",
+          link: "https://www.linkedin.com/in/vinaysomawat/",
+        },
+        {
+          text: "Twitter",
+          link: "https://twitter.com/thesigmakid",
+        },
+      // {
+      //   text: "Buy me a coffee",
+      //   link: "https://www.buymeacoffee.com/r194dME8y",
+      // },
       {
         text: "Github",
         link: "https://github.com/vinaysomawat/vinaysomawat.github.io",
@@ -170,6 +191,6 @@ export const footer = [
   },
   {
     label: "copyright-text",
-    data: ["Made with &hearts; by Vinay Somawat"],
+    data: ["Adapted from vinaysomawat.github.io"],
   },
 ];

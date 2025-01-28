@@ -5,17 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title></title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Portfolio webpage of Vinay Somawat" />
+    <meta name="description" content="Portfolio webpage of Santiago Jiménez-Navarro" />
     <meta
       name="keywords"
-      content="portfolio,website,personal website,github,projects,computer science and engineering"
+      content="portfolio,website,personal website,github,projects,computer science and engineering,PhD"
     />
-    <meta name="author" content="Vinay Somawat" />
+    <meta name="author" content="Santiago Jiménez-Navarro" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <link rel="icon" type="image/png" href="./logo.png" />
+    <link rel="icon" type="image/png" href="./profilepic.png" />
     <link
       href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Raleway&display=swap"
       rel="stylesheet"
@@ -30,6 +30,8 @@
     <script src="js/modernizr-2.6.2.min.js"></script>
     <script type="module" src="index.js"></script>
     <script src="js/profile-card.js"></script>
+
+    <script type="module" src="js/populateHTML.js"></script>
   </head>
   <body>
     <div id="colorlib-page">
@@ -50,9 +52,10 @@
         >
           <div class="text-center">
             <div class="author-img">
-              <img alt="profile-img" src="./logo.png" />
+              <img alt="profile-img" src="profilepic.png" />
             </div>
-            <h1 id="colorlib-logo"><a href="./index.html">Vinay Somawat</a></h1>
+            <h2 id="colorlib-logo"><a href="./index.html">Santiago <br/> Jiménez-Navarro</a></h2>
+            <h4>PhD Student</h4>
           </div>
           <nav
             id="colorlib-main-menu"
@@ -60,38 +63,85 @@
             class="navbar"
             style="padding-top: 2em"
           >
+
+          <style>
+            h1 {
+                position: relative;
+                display: inline-block;
+            }
+            h1::after {
+                content: ""; /* Empty content to create the line */
+                display: block;
+                width: 50%; /* Adjust the width of the line */
+                height: 3px; /* Line thickness */
+                background-color: rgb(15, 103, 177); /* Line color */
+                margin: 5px 0 0; /* Space between text and line */
+            }
+        </style>
+
+
             <div id="navbar" class="collapse">
               <ul>
                 <li><a href="#" data-nav-section="about">About</a></li>
-                <li><a href="#" data-nav-section="skills">Skills</a></li>
-                <li>
+                <li><a href="#" data-nav-section="publications">Publications</a></li>
+                <!-- <li><a href="#" data-nav-section="skills">Skills</a></li> -->
+                <!-- <li>
                   <a href="#" data-nav-section="repos">Top Repositories</a>
                 </li>
                 <li><a href="#" data-nav-section="blogs">Blogs</a></li>
                 <li>
                   <a href="#" data-nav-section="experience">Work Experience</a>
-                </li>
+                </li> -->
                 <li>
-                  <a href="#" data-nav-section="trekking">Trekking</a>
+                  <a href="#" data-nav-section="supervision">Supervision</a>
                 </li>
                 <li><a href="#" data-nav-section="education">Education</a></li>
+                <li><a href="#" data-nav-section="misc">Miscellaneous</a></li>
                 <li><a href="#" data-nav-section="contact">Contact</a></li>
               </ul>
             </div>
           </nav>
         </aside>
+        
         <div id="colorlib-main">
           <section class="colorlib-about" data-section="about">
             <div class="colorlib-narrow-content">
               <div class="row animate-box" data-animate-effect="fadeInLeft">
                 <div class="about-desc">
                   <h1>About</h1>
-                  <div id="bio"></div>
+                  <div id="bio"> 
+                    Hi! I am Santiago, a PhD candidate in Computer Science at the <a href="https://graphics.unizar.es" target="_blank">Graphics and Imaging Lab</a> at
+                    University of Zaragoza (Spain), working under the supervision of <a href="https://ana-serrano.github.io" target="_blank">Prof. Ana Serrano</a> and 
+                    <a href="https://webdiis.unizar.es/~bmasia/" target="_blank">Prof. Belen Masia</a>. Previously, I obtained a BSc degree in Computer Science at 
+                    University of Zaragoza, and a MSc in Robotics, Graphics and Computer Vision at the same University. 
+                    <br/>
+                    My research interests span in the intersection between Computer Graphics and Machine Learning, with a special focus in human perception. 
+                    My non-academic interests include practicing sports and learning new skills!
+                  </div>
                 </div>
               </div>
             </div>
           </section>
-          <section class="colorlib-skills" data-section="skills">
+
+
+          <section class="colorlib-projects no-print" data-section="publications">
+            <div class="colorlib-narrow-content">
+               <div class="row row-bottom-padded-sm animate-box"
+                   data-animate-effect="fadeInLeft">
+                  <div class="about-desc">
+                     <h1>Publications</h1>
+                     <p>
+                        A list of the publications in which I've been involved during my doctoral studies:
+                     </p>
+                  </div>
+               </div>
+               
+               <ul id="publications-list" class=" animate-box" data-animate-effect="fadeInLeft" > </ul>
+            </div>
+         </section>
+
+
+          <!-- <section class="colorlib-skills" data-section="skills">
             <div class="colorlib-narrow-content">
               <div
                 class="row row-bottom-padded-sm animate-box"
@@ -104,6 +154,7 @@
               <div id="skills" class="row"></div>
             </div>
           </section>
+
           <section class="colorlib-profile" data-section="profile-card">
             <div class="colorlib-narrow-content">
               <div
@@ -120,8 +171,10 @@
                 </div>
               </div>
             </div>
-          </section>
-          <section class="colorlib-experience no-print" data-section="repos">
+          </section> -->
+
+
+          <!-- <section class="colorlib-experience no-print" data-section="repos">
             <div class="colorlib-narrow-content">
               <div
                 class="row row-bottom-padded-sm animate-box"
@@ -159,6 +212,8 @@
               </ul>
             </div>
           </section>
+
+
           <section class="colorlib-blogs no-print" data-section="blogs">
             <div class="colorlib-narrow-content">
               <div
@@ -202,6 +257,8 @@
               </ul>
             </div>
           </section>
+
+
           <section class="colorlib-experience" data-section="experience">
             <div class="colorlib-narrow-content">
               <div
@@ -214,8 +271,10 @@
               </div>
               <div class="timeline-centered" id="experience"></div>
             </div>
-          </section>
-          <section class="colorlib-skills" data-section="trekking">
+          </section> -->
+
+
+          <section class="colorlib-skills" data-section="supervision">
             <div class="colorlib-narrow-content">
               <div
                 class="row row-bottom-padded-sm animate-box"
@@ -223,14 +282,16 @@
               >
                 <div class="about-desc">
                   <h1>
-                    Trekking <span style="color: #f9bf3f">Adventures</span>
+                    Supervision
                   </h1>
-                  <p>Here are the treks I’ve explored so far:</p>
-                  <div id="trekking" class="row"></div>
+                  <p>During the course of my PhD, I had the chance to supervise the following taltented students:</p>
+                  <div id="supervision" class="row"></div>
                 </div>
               </div>
             </div>
           </section>
+
+
           <section class="colorlib-education" data-section="education">
             <div class="colorlib-narrow-content">
               <div
@@ -244,6 +305,27 @@
               <div class="timeline-centered" id="education"></div>
             </div>
           </section>
+
+
+
+          <section class="colorlib-projects no-print" data-section="misc">
+            <div class="colorlib-narrow-content">
+               <div class="row row-bottom-padded-sm animate-box"
+                   data-animate-effect="fadeInLeft">
+                  <div class="about-desc">
+                     <h1>Miscellaneous</h1>
+                     <p>
+                        other things
+                     </p>
+                  </div>
+               </div>
+               
+               <ul id="misc-list" class=" animate-box" data-animate-effect="fadeInLeft" > </ul>
+            </div>
+         </section>
+
+
+
           <section class="colorlib-contact" data-section="contact">
             <div class="colorlib-narrow-content">
               <div
@@ -254,13 +336,15 @@
                   <h1>Contact</h1>
                 </div>
                 <p>
-                  Feel free to email me at <strong>vinaysomawat40@gmail.com</strong> for tech
+                  Feel free to email me at <strong>s.jimenez@unizar.es</strong> for tech
                   discussions, business opportunities, or just to say hello—I’d
                   love to hear from you!
                 </p>
               </div>
             </div>
           </section>
+
+
           <section class="colorlib-footer no-print" data-section="footer">
             <div class="colorlib-narrow-content">
               <footer class="footer" id="footer"></footer>
