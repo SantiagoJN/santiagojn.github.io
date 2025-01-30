@@ -1,9 +1,10 @@
 <!DOCTYPE html>
+<!-- Color palette used: https://colorhunt.co/palette/faffaf96c9f43fa2f60f67b1 -->
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title></title>
+    <title>Santiago Jimenez-Navarro</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="Portfolio webpage of Santiago Jiménez-Navarro" />
     <meta
@@ -26,10 +27,12 @@
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 
     <script src="js/modernizr-2.6.2.min.js"></script>
     <script type="module" src="index.js"></script>
     <script src="js/profile-card.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
     <script type="module" src="js/populateHTML.js"></script>
   </head>
@@ -50,6 +53,7 @@
           role="complementary"
           class="border js-fullheight no-print"
         >
+
           <div class="text-center">
             <div class="author-img">
               <img alt="profile-img" src="profilepic.png" />
@@ -57,11 +61,27 @@
             <h2 id="colorlib-logo"><a href="./index.html">Santiago <br/> Jiménez-Navarro</a></h2>
             <h4>PhD Student</h4>
           </div>
+
+          <div class="social-buttons">
+            <a href="https://www.linkedin.com/in/santiagojn/" target="_blank" class="social-button">
+                <i class="fab fa-linkedin"></i> <!-- LinkedIn Icon -->
+            </a>
+            <a href="https://github.com/santiagojn" target="_blank" class="social-button">
+                <i class="fab fa-github"></i> <!-- GitHub Icon -->
+            </a>
+            <a href="https://scholar.google.es/citations?user=EQyOPTgAAAAJ&hl=es&oi=sra" target="_blank" class="social-button">
+              <img src="images/scholar-icon.png" alt="Google Scholar" style="width: 20px; height: 20px;"/>
+            </a>          
+            <a href="https://orcid.org/0009-0004-7376-8894" target="_blank" class="social-button">
+                <i class="fab fa-orcid"></i> <!-- ORCID Icon -->
+            </a>
+        </div>
+
           <nav
             id="colorlib-main-menu"
             role="navigation"
             class="navbar"
-            style="padding-top: 2em"
+            style="padding-top: 1em"
           >
 
           <style>
@@ -92,9 +112,9 @@
                 <li>
                   <a href="#" data-nav-section="experience">Work Experience</a>
                 </li> -->
-                <li>
+                <!-- <li>
                   <a href="#" data-nav-section="supervision">Supervision</a>
-                </li>
+                </li> -->
                 <li><a href="#" data-nav-section="education">Education</a></li>
                 <li><a href="#" data-nav-section="misc">Miscellaneous</a></li>
                 <li><a href="#" data-nav-section="contact">Contact</a></li>
@@ -274,7 +294,7 @@
           </section> -->
 
 
-          <section class="colorlib-skills" data-section="supervision">
+          <!-- <section class="colorlib-skills" data-section="supervision">
             <div class="colorlib-narrow-content">
               <div
                 class="row row-bottom-padded-sm animate-box"
@@ -289,7 +309,7 @@
                 </div>
               </div>
             </div>
-          </section>
+          </section> -->
 
 
           <section class="colorlib-education" data-section="education">
@@ -315,7 +335,7 @@
                   <div class="about-desc">
                      <h1>Miscellaneous</h1>
                      <p>
-                        other things
+                        Some fun activities I had the opportunity to participate in!
                      </p>
                   </div>
                </div>

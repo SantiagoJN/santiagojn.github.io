@@ -105,7 +105,9 @@ export const education = [
     title: "Master Program in Robotics, Graphics and Computer Vision",
     duration: "2022 - 2024",
     subtitle: "University of Zaragoza, Spain",
-    details: [],
+    details: [
+      `Master thesis named **[<span style="color:rgb(0, 66, 117)">Learning Interpretable Representations of Material appearance</span>](https://deposita.unizar.es/TAZ/EINA/2024/79880/TAZ-TFM-2024-038.pdf)**, funded by a competitive scholarship from the Aragon Institute for Engineering Research (I3A), and graded with a 9.5 (out of 10) with honors.`
+    ],
     tags: [
       "Computer Vision",
       "Machine Learning",
@@ -119,7 +121,9 @@ export const education = [
     title: "Bachelor's Degree in Computer Science and Engineering",
     duration: "2018 - 2022",
     subtitle: "University of Zaragoza, Spain",
-    details: [],
+    details: [
+      `Final degree project, named **[<span style="color:rgb(0, 66, 117)">Audiovisual Saliency Prediction in 360º Content</span>](https://deposita.unizar.es/TAZ/EINA/2022/68541/TAZ-TFG-2022-2243.pdf)**, graded with a 9.6 (out of 10), and awarded by the Santander Bank as the **[<span style="color:rgb(0, 66, 117)">third best</span>](https://catbs.unizar.es/articulos/premios-santander-a-competencias-digitales-en-trabajos-fin-de-estudios-de-la-universidad-de-zaragoza-4)** in the field of engineering and architecture.`
+    ],
     tags: [
       "Data Structures & Algorithms",
       "Operating Systems",
@@ -134,30 +138,30 @@ export const education = [
 ];
 
 export const footer = [
-  //   {
-  //     label: "Dev Profiles",
-  //     data: [
-  //       {
-  //         text: "Stackoverflow",
-  //         link: "https://stackoverflow.com/users/8461233/vinay-somawat",
-  //       },
-  //       {
-  //         text: "GitHub",
-  //         link: "https://github.com/vinaysomawat",
-  //       },
-  //       {
-  //         text: "LeetCode",
-  //         link: "https://leetcode.com/somawatvinay/",
-  //       },
-  //     ],
-  //   },
+    {
+      label: "Dev Profiles",
+      data: [
+        {
+          text: "GitHub",
+          link: "https://github.com/santiagojn",
+        },
+        {
+          text: "Stackoverflow",
+          link: "https://stackoverflow.com/users/14292876/santiago-jiménez",
+        },
+        // {
+        //   text: "LeetCode",
+        //   link: "https://leetcode.com/somawatvinay/",
+        // },
+      ],
+    },
     {
       label: "Resources",
       data: [
-        {
-          text: "Enable Dark/Light Mode",
-          func: "enableDarkMode()",
-        },
+        // {
+        //   text: "Enable Dark/Light Mode",
+        //   func: "enableDarkMode()",
+        // },
         {
           text: "Print this page",
           func: "window.print()",
@@ -173,20 +177,28 @@ export const footer = [
     data: [
         {
           text: "Linkedin",
-          link: "https://www.linkedin.com/in/vinaysomawat/",
+          link: "https://www.linkedin.com/in/santiagojn/",
         },
         {
-          text: "Twitter",
-          link: "https://twitter.com/thesigmakid",
+          text: "ORCID",
+          link: "https://orcid.org/0009-0004-7376-8894",
         },
+        {
+          text: "Google Scholar",
+          link: "https://scholar.google.es/citations?user=EQyOPTgAAAAJ&hl=es&oi=sra",
+        },
+        // {
+        //   text: "Twitter",
+        //   link: "https://twitter.com/thesigmakid",
+        // },
       // {
       //   text: "Buy me a coffee",
       //   link: "https://www.buymeacoffee.com/r194dME8y",
       // },
-      {
-        text: "Github",
-        link: "https://github.com/vinaysomawat/vinaysomawat.github.io",
-      },
+      // {
+      //   text: "Github",
+      //   link: "https://github.com/vinaysomawat/vinaysomawat.github.io",
+      // },
     ],
   },
   {

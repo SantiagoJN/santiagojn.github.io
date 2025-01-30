@@ -120,7 +120,7 @@ figure figcaption {
 	padding-top: 3em;
 	padding-bottom: 1px;
 	float: left;
-	width: 300px;
+	width: 360px;
 	position: fixed;
 	z-index: 1001;
 	/*! 																								 COLOR OF THE LEFT INFO BAR */
@@ -128,7 +128,7 @@ figure figcaption {
 	-webkit-transition: 0.5s;
 	-o-transition: 0.5s;
 	transition: 0.5s;
-	left: 60px;
+	left: 0px; /*! Don't leave a space in the left! (looks old to me :/) */
 }
 @media screen and (max-width: 768px) {
 	#colorlib-aside {
@@ -151,8 +151,8 @@ figure figcaption {
 .resume-content img {
 	margin: 0 10px;
 	width: 100%;
-	max-width: 150px;
-	max-height: 100px;
+	max-width: 300px;
+	/* max-height: 100px; */
 	height: auto;
 }
 #colorlib-aside .author-img {
@@ -697,10 +697,40 @@ body.offcanvas .colorlib-nav-toggle {
 .project-image {
 	float: left;
 }
-/* 
-.project-card {
-	height: 150px;
-} */
+
+.project-card {  /*! 																"Tarjetas" de proyectos */
+	display: flex;
+    flex-direction: column; /* Stack items inside vertically */
+    border: 1px solid rgb(150, 201, 244);  /* Thin border with a light gray color */
+    border-radius: 5px;  /* Optional: rounded corners */
+    padding: 5px 15px 25px;  /* Space inside the card */
+    margin-bottom: 20px;  /* Space between cards */
+    background-color: #fff;  /* Optional: background color */
+    box-shadow: 2px 2px 5px rgba(15, 103, 177, 0.3); /* Optional: subtle shadow */
+	overflow: hidden; /* Prevents content from overflowing */
+}
+
+.resume-item {
+    display: flex;
+    flex-wrap: wrap; /* Ensures content wraps if needed */
+    align-items: flex-start; /* Aligns image and text at the top */
+    width: 100%; /* Ensures the div stretches */
+}
+#left-div {
+    flex: 1; /* Allows the image container to take up space */
+    max-width: 40%; /* Adjust based on how much space the image should take */
+}
+
+#left-div img {
+    width: 100%; /* Ensures the image fits within the div */
+    height: auto; /* Keeps the aspect ratio */
+    display: block; /* Avoids extra space issues */
+}
+
+#right-div {
+    flex: 2; /* Allows text to take up more space */
+    padding-left: 15px; /* Adds space between image and text */
+}
 
 .project-info {
 	position: absolute;
@@ -934,7 +964,7 @@ body.offcanvas .colorlib-nav-toggle {
 .timeline-centered .timeline-entry .timeline-entry-inner .timeline-label .timeline-text {
 	margin-bottom: 0px;
 	font-size: 13px;
-	color: rgb(102, 102, 102);
+	color: rgb(20, 20, 20);
 }
 
 .timeline-centered .timeline-entry .timeline-entry-inner .timeline-label div {
@@ -1975,13 +2005,13 @@ ul {
 
 .project-conference {
 	font-weight: 100;
-	margin-bottom: 10px;
+	margin-bottom: 25px;
 	color: #8b8585;
-	margin-bottom: 2px;
+	/* margin-bottom: 2px; */
 }
 
 .project-description {
-	font-size: 12px;
+	font-size: 14px;
 	margin-top: 5px;
 	margin-bottom: 5px;
 	color: #000;
@@ -2220,4 +2250,29 @@ hr {
 
   .project-list li {
     margin-bottom: 100px; /* Adjust the gap size as needed */
+}
+
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.social-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgb(15, 103, 177);
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.social-button:hover {
+    background-color: rgb(150, 201, 244);
 }

@@ -309,7 +309,7 @@ function populateExp_Edu(items, id) {
     for (let j = 0; j < items[i].details.length; j++) {
       let pTimelineText = document.createElement("p");
       pTimelineText.className = "timeline-text";
-      pTimelineText.innerHTML = "&blacksquare; " + items[i].details[j];
+      pTimelineText.innerHTML = marked.parse(items[i].details[j]);
       divTimelineLabel.append(pTimelineText);
     }
 
@@ -452,7 +452,7 @@ fetchReposFromGit(gitRepo);
 fetchGitConnectedData(gitConnected);
 
 // populateExp_Edu(experience, "experience");
-populateSupervision(supervision);
+// populateSupervision(supervision); // * REMOVE COMMENT LATER ON :) 
 populateExp_Edu(education, "education");
 
 populateLinks(footer, "footer");

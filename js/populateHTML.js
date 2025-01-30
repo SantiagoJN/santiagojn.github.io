@@ -1,118 +1,7 @@
 // from https://chaes.games/
 import { default as data } from "../db/db.js";
 
-function populateSkills(items, id) {
-	let skillsTag = document.getElementById(id);
-	for (let i = 0; i < items.length; i++) {
-		let h3 = document.createElement("h3");
-		h3.innerHTML = items[i].skillName;
-		if (items[i].percentage >= 80) h3.innerHTML += " <span style=\"color: #02c39a; float: right; font-size: 12.5px; letter-spacing: 0\">ADVANCED</span>";
-		else if (items[i].percentage >= 50) h3.innerHTML += " <span style=\"color: #f9bf3f; float: right; font-size: 12.5px; letter-spacing: 0\">INTERMEDIATE</span>";
-		else h3.innerHTML += " <span style=\"color: #2c98f0; float: right; font-size: 12.5px; letter-spacing: 0\">BEGINNER</span>";
 
-		let divProgress = document.createElement("div");
-		divProgress.className = "progress";
-
-		let divProgressBar = document.createElement("div");
-		divProgressBar.className = "progress-bar color-";
-		divProgressBar.style = "width:" + items[i].percentage + "%";
-		if (items[i].percentage >= 80) divProgressBar.className += 8;
-		else if (items[i].percentage >= 50) divProgressBar.className += 3;
-		else divProgressBar.className += 1;
-		divProgress.append(divProgressBar);
-
-		let divProgressWrap = document.createElement("div");
-		divProgressWrap.className = "progress-wrap";
-		divProgressWrap.append(h3);
-		divProgressWrap.append(divProgress);
-
-		let divAnimateBox = document.createElement("div");
-		divAnimateBox.className = "col-md-6 animate-box";
-		divAnimateBox.append(divProgressWrap);
-
-		skillsTag.append(divAnimateBox);
-	}
-}
-
-// TODO: Collapse into common function.
-function populateAwards(items, id) {
-	let awarddesign = document.getElementById(id);
-	for (let i = 0; i < items.length; i++) {
-		let h4 = document.createElement("h4");
-		h4.className = "project-heading";
-		h4.innerHTML = items[i].awardName;
-
-		let a = document.createElement("p");
-		a.append(h4);
-
-		let img = document.createElement("img");
-		img.src = items[i].image;
-		img.className = "img-fluid";
-
-		let divResumeContentLeft = document.createElement("div");
-		divResumeContentLeft.className = "resume-content";
-		divResumeContentLeft.id = "left-div";
-		divResumeContentLeft.append(img);
-
-		let divResumeContentRight = document.createElement("div");
-		divResumeContentRight.className = "resume-content";
-		divResumeContentRight.id = "right-div";
-
-		let p = document.createElement("p");
-		p.className = "project-description";
-		p.innerHTML = items[i].summary;
-
-		let divLink = document.createElement("div");
-		divLink.className = "project-link";
-
-		let link = document.createElement("a");
-		link.innerHTML = items[i].preview;
-		link.href = items[i].preview;
-		link.target = "_blank";
-		divLink.append(link);
-
-		let divSpan = document.createElement("div");
-		for (let k = 0; k < items[i].tags.length; k++) {
-			let anchor = document.createElement("a"); // Create an anchor tag
-			anchor.setAttribute("href", "https://google.com"); // Set the href attribute
-			anchor.setAttribute("target", "_blank"); // Optional: Opens in a new tab
-			// anchor.className = "badge badge-secondary"; // Add your classes
-			anchor.innerHTML = items[i].tags[k]; // Set the text content
-
-			divSpan.append(anchor); // Append the anchor to the div
-		}
-
-		// var link = document.createElement("a");
-		// link.setAttribute("href", "http://abc.org/index.aspx?objectid=1");
-		// link.innerHTML = "Link to the object";
-		// var span = document.createElement("span");
-		// span.appendChild(link);
-		// document.body.appendChild(span);
-
-
-
-		let divSubHeading = document.createElement("div");
-		divSubHeading.className = "sub-heading";
-		divSubHeading.append(p);
-		divSubHeading.append(divLink);
-		divSubHeading.append(divSpan);
-		divResumeContentRight.append(divSubHeading);
-
-		let divResumeItem = document.createElement("div");
-		divResumeItem.className = "resume-item";
-		divResumeItem.append(divResumeContentLeft);
-		divResumeItem.append(divResumeContentRight);
-		a.append(divResumeItem);
-
-		let divProjectCard = document.createElement("div");
-		divProjectCard.className = "project-card";
-		divProjectCard.append(a);
-
-		let li = document.createElement("li");
-		li.append(divProjectCard);
-		awarddesign.append(li);
-	}
-}
 
 function populateGalleries(items, id) {
 	let galleriesdesign = document.getElementById(id);
@@ -192,7 +81,7 @@ function populateProjects(items, id) {
 		link.innerHTML = items[i].preview;
 		link.href = items[i].preview;
 		link.target = "_blank";
-		divLink.append(link);
+		// divLink.append(link);
 
 		let divSpan = document.createElement("div");
 		for (let k = 0; k < items[i].tags.length; k++) {
@@ -231,7 +120,6 @@ function populateProjects(items, id) {
 
 function populateMisc(items, id) {
 	let projectdesign = document.getElementById(id);
-	projectdesign.classList.add('project-list');
 	for (let i = 0; i < items.length; i++) {
 		let h3 = document.createElement("h3");
 		h3.className = "project-heading";
@@ -239,6 +127,7 @@ function populateMisc(items, id) {
 
 		let a = document.createElement("p");
 		a.append(h3);
+
 
 		let h4_2 = document.createElement("h4");
 		h4_2.className = "project-conference";
@@ -261,8 +150,16 @@ function populateMisc(items, id) {
 
 		let p = document.createElement("p");
 		p.className = "project-description";
-		p.innerHTML = items[i].summary;
+		p.innerHTML = marked.parse(items[i].summary);
 
+		let divLink = document.createElement("div");
+		divLink.className = "project-link";
+
+		let link = document.createElement("a");
+		link.innerHTML = items[i].preview;
+		link.href = items[i].preview;
+		link.target = "_blank";
+		// divLink.append(link);
 
 		let divSpan = document.createElement("div");
 		for (let k = 0; k < items[i].tags.length; k++) {
@@ -279,7 +176,7 @@ function populateMisc(items, id) {
 		let divSubHeading = document.createElement("div");
 		divSubHeading.className = "sub-heading";
 		divSubHeading.append(p);
-		// divSubHeading.append(divLink);
+		divSubHeading.append(divLink);
 		divSubHeading.append(divSpan);
 		divResumeContentRight.append(divSubHeading);
 
