@@ -1,387 +1,556 @@
 <!DOCTYPE html>
-<!-- Color palette used: https://colorhunt.co/palette/faffaf96c9f43fa2f60f67b1 -->
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Santiago Jimenez-Navarro</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Portfolio webpage of Santiago Jiménez-Navarro" />
-    <meta
-      name="keywords"
-      content="portfolio,website,personal website,github,projects,computer science and engineering,PhD"
-    />
-    <meta name="author" content="Santiago Jiménez-Navarro" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <link rel="icon" type="image/png" href="./profilepic.png" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Raleway&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/animate.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"
-    />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 
-    <script src="js/modernizr-2.6.2.min.js"></script>
-    <script type="module" src="index.js"></script>
-    <script src="js/profile-card.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <script type="module" src="js/populateHTML.js"></script>
-  </head>
-  <body>
-    <div id="colorlib-page">
-      <div class="container-wrap">
-        <a
-          href="#"
-          class="js-colorlib-nav-toggle colorlib-nav-toggle"
-          data-toggle="collapse"
-          data-target="#navbar"
-          aria-expanded="false"
-          aria-controls="navbar"
-          ><i></i
-        ></a>
-        <aside
-          id="colorlib-aside"
-          role="complementary"
-          class="border js-fullheight no-print"
-        >
+  <title>Santiago Jimenez-Navarro</title>
+  <meta content="PhD Student on Computer Graphics and Machine Learning at University of Zaragoza (Graphics and Imaging Lab)" name="description">
+  <meta content="Santiago Jimenez-Navarro" name="keywords">
 
-          <div class="text-center">
-            <div class="author-img">
-              <img alt="profile-img" src="profilepic.png" />
-            </div>
-            <h2 id="colorlib-logo"><a href="./index.html">Santiago <br/> Jiménez-Navarro</a></h2>
-            <h4>PhD Student</h4>
-          </div>
+  <!-- Favicons -->
+  <link href="assets/data/images/favicon.ico" rel="icon">
 
-          <div class="social-buttons">
-            <a href="https://www.linkedin.com/in/santiagojn/" target="_blank" class="social-button">
-                <i class="fab fa-linkedin"></i> <!-- LinkedIn Icon -->
-            </a>
-            <a href="https://github.com/santiagojn" target="_blank" class="social-button">
-                <i class="fab fa-github"></i> <!-- GitHub Icon -->
-            </a>
-            <a href="https://scholar.google.es/citations?user=EQyOPTgAAAAJ&hl=es&oi=sra" target="_blank" class="social-button">
-              <img src="images/scholar-icon.png" alt="Google Scholar" style="width: 20px; height: 20px;"/>
-            </a>          
-            <a href="https://orcid.org/0009-0004-7376-8894" target="_blank" class="social-button">
-                <i class="fab fa-orcid"></i> <!-- ORCID Icon -->
-            </a>
-            <a href="files/2025-02-CV.pdf" target="_blank" class="social-button">
-                <i class="fas fa-file-alt"></i> <!-- CV Icon -->
-            </a>
-        </div>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
-          <nav
-            id="colorlib-main-menu"
-            role="navigation"
-            class="navbar"
-            style="padding-top: 1em"
-          >
-
-          <style>
-            h1 {
-                position: relative;
-                display: inline-block;
-            }
-            h1::after {
-                content: ""; /* Empty content to create the line */
-                display: block;
-                width: 50%; /* Adjust the width of the line */
-                height: 3px; /* Line thickness */
-                background-color: rgb(15, 103, 177); /* Line color */
-                margin: 5px 0 0; /* Space between text and line */
-            }
-        </style>
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 
 
-            <div id="navbar" class="collapse">
-              <ul>
-                <li><a href="#" data-nav-section="about">About</a></li>
-                <li><a href="#" data-nav-section="publications">Publications</a></li>
-                <!-- <li><a href="#" data-nav-section="skills">Skills</a></li> -->
-                <!-- <li>
-                  <a href="#" data-nav-section="repos">Top Repositories</a>
-                </li>
-                <li><a href="#" data-nav-section="blogs">Blogs</a></li>
-                <li>
-                  <a href="#" data-nav-section="experience">Work Experience</a>
-                </li> -->
-                <!-- <li>
-                  <a href="#" data-nav-section="supervision">Supervision</a>
-                </li> -->
-                <li><a href="#" data-nav-section="education">Education</a></li>
-                <li><a href="#" data-nav-section="misc">Miscellaneous</a></li>
-                <li><a href="#" data-nav-section="contact">Contact</a></li>
-              </ul>
-            </div>
-          </nav>
-        </aside>
-        
-        <div id="colorlib-main">
-          <section class="colorlib-about" data-section="about">
-            <div class="colorlib-narrow-content">
-              <div class="row animate-box" data-animate-effect="fadeInLeft">
-                <div class="about-desc">
-                  <h1>About</h1>
-                  <div id="bio"> 
-                    Hi! I am Santiago, a PhD candidate in Computer Science at the <a href="https://graphics.unizar.es" target="_blank">Graphics and Imaging Lab</a> at
-                    University of Zaragoza (Spain), working under the supervision of <a href="https://ana-serrano.github.io" target="_blank">Prof. Ana Serrano</a> and 
-                    <a href="https://webdiis.unizar.es/~bmasia/" target="_blank">Prof. Belen Masia</a>. Previously, I obtained a BSc degree in Computer Science at 
-                    University of Zaragoza, and a MSc in Robotics, Graphics and Computer Vision at the same University. 
-                    <br/>
-                    My research interests span in the intersection between Computer Graphics and Machine Learning, with a special focus in human perception. 
-                    My non-academic interests include practicing sports and learning new skills!
-                    <div style="margin-top: 20px;">
-                      You can download my CV <strong><a href="files/2025-02-CV.pdf" target="_blank">here</a> </strong>.
-                    </div>
-                  </div>
-                  
-                </div>
-              </div>
-            </div>
-          </section>
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+  
 
+  <!-- =======================================================
+  * Template Name: iPortfolio
+  * Updated: Mar 10 2023 with Bootstrap v5.2.3
+  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
 
-          <section class="colorlib-projects no-print" data-section="publications">
-            <div class="colorlib-narrow-content">
-               <div class="row row-bottom-padded-sm animate-box"
-                   data-animate-effect="fadeInLeft">
-                  <div class="about-desc">
-                     <h1>Publications</h1>
-                     <p>
-                        A list of the publications in which I've been involved during my doctoral studies:
-                     </p>
-                  </div>
-               </div>
-               
-               <ul id="publications-list" class=" animate-box" data-animate-effect="fadeInLeft" > </ul>
-            </div>
-         </section>
+<body>
 
+  <!-- ======= Mobile nav toggle button ======= -->
+  <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
 
-          <!-- <section class="colorlib-skills" data-section="skills">
-            <div class="colorlib-narrow-content">
-              <div
-                class="row row-bottom-padded-sm animate-box"
-                data-animate-effect="fadeInLeft"
-              >
-                <div class="about-desc">
-                  <h1>Skills</h1>
-                </div>
-              </div>
-              <div id="skills" class="row"></div>
-            </div>
-          </section>
+  <!-- ======= Header ======= -->
+  <header id="header">
+    <div class="d-flex flex-column">
+      <div class="profile">
+      <img src="assets\data\images\profilepic_close.png" alt="Santiago Jimenez-Navarro" class="img-fluid rounded-circle">
+      <h1 class="text-light text-center">
+        <a href="index.html">Santiago<br><span class="d-block">Jimenez Navarro</span></a>
+		</h1>
+        <div class="social-links mt-3 text-center">
+		  <!-- <a href="https://people.mpi-inf.mpg.de/~djimenez/" class="person"><i class="bi bi-person"></i></a> -->
+		  <a href="https://www.linkedin.com/in/santiagojn/" class="linkedin"><i class="bi bi-linkedin"></i></a>
+		  <a href="https://scholar.google.es/citations?user=EQyOPTgAAAAJ&hl=es&oi=sra"><svg style=" margin-bottom: -10px; ;" xmlns="http://www.w3.org/2000/svg" aria-label="Google Scholar" role="img" viewBox="0 100 512 512" width="32px" height="32px" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path fill="#ffffff" d="M213 111l-107 94h69c5 45 41 64 78 67-7 18-4 27 7 39-43 1-103 26-103 67 4 45 63 54 92 54 38 1 81-19 90-54 4-35-10-54-31-71-23-18-28-28-21-40 15-17 35-27 39-51 2-17-2-28-6-43l45-38-1 16c-3 2-5 6-5 9v103c2 13 22 11 23 0V160c0-3-2-7-5-8v-25l16-16zm58 141c-61 10-87-87-38-99 56-11 83 86 38 99zm-5 73c60 13 61 63 10 78-44 9-82-4-81-30 0-25 35-48 71-48z"></path></g></svg></a>
+		  <a href="https://github.com/santiagojn" class="github"><i class="bi bi-github"></i></a>
+      <a href="https://orcid.org/0009-0004-7376-8894" class="orcid">
+        <i class="fab fa-orcid"></i>
+      </a>
 
-          <section class="colorlib-profile" data-section="profile-card">
-            <div class="colorlib-narrow-content">
-              <div
-                class="row row-bottom-padded-sm animate-box"
-                data-animate-effect="fadeInLeft"
-              >
-                <div class="profile-cards">
-                  <div class="col">
-                    <div class="stack-card" user-id="8461233"></div>
-                  </div>
-                  <div class="col">
-                    <div class="github-card" username="vinaysomawat"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section> -->
-
-
-          <!-- <section class="colorlib-experience no-print" data-section="repos">
-            <div class="colorlib-narrow-content">
-              <div
-                class="row row-bottom-padded-sm animate-box"
-                data-animate-effect="fadeInLeft"
-              >
-                <div class="about-desc">
-                  <a
-                    href="https://github.com/vinaysomawat"
-                    target="_blank"
-                    style="color: inherit"
-                  >
-                    <h1>
-                      Top <span style="color: #f9bf3f">Repositories</span>
-                      <i
-                        class="fa fa-external-link"
-                        aria-hidden="true"
-                        style="font-size: 30px"
-                      ></i>
-                    </h1>
-                  </a>
-                </div>
-              </div>
-              <ul
-                id="accordion"
-                class="accordion animate-box"
-                data-animate-effect="fadeInLeft"
-              >
-                <li class="open">
-                  <ul
-                    id="repos"
-                    class=""
-                    style="display: block; padding: 10px"
-                  ></ul>
-                </li>
-              </ul>
-            </div>
-          </section>
-
-
-          <section class="colorlib-blogs no-print" data-section="blogs">
-            <div class="colorlib-narrow-content">
-              <div
-                class="row row-bottom-padded-sm animate-box"
-                data-animate-effect="fadeInLeft"
-              >
-                <div class="about-desc">
-                  <a
-                    href="https://vinaysomawat.medium.com/"
-                    target="_blank"
-                    style="color: inherit"
-                  >
-                    <h1>
-                      Latest <span style="color: #f9bf3f">Blogs</span>
-                      <i
-                        class="fa fa-external-link"
-                        aria-hidden="true"
-                        style="font-size: 30px"
-                      ></i>
-                    </h1>
-                  </a>
-                </div>
-              </div>
-              <ul
-                id="accordion"
-                class="accordion animate-box"
-                data-animate-effect="fadeInLeft"
-              >
-                <li class="open">
-                  <ul
-                    id="blogs"
-                    class="submenu"
-                    style="
-                      display: flex;
-                      padding: 10px;
-                      flex-direction: column;
-                      gap: 10px;
-                    "
-                  ></ul>
-                </li>
-              </ul>
-            </div>
-          </section>
-
-
-          <section class="colorlib-experience" data-section="experience">
-            <div class="colorlib-narrow-content">
-              <div
-                class="row row-bottom-padded-sm animate-box fadeInLeft animated"
-                data-animate-effect="fadeInLeft"
-              >
-                <div class="about-desc">
-                  <h1>Work <span style="color: #f9bf3f">Experience</span></h1>
-                </div>
-              </div>
-              <div class="timeline-centered" id="experience"></div>
-            </div>
-          </section> -->
-
-
-          <!-- <section class="colorlib-skills" data-section="supervision">
-            <div class="colorlib-narrow-content">
-              <div
-                class="row row-bottom-padded-sm animate-box"
-                data-animate-effect="fadeInLeft"
-              >
-                <div class="about-desc">
-                  <h1>
-                    Supervision
-                  </h1>
-                  <p>During the course of my PhD, I had the chance to supervise the following taltented students:</p>
-                  <div id="supervision" class="row"></div>
-                </div>
-              </div>
-            </div>
-          </section> -->
-
-
-          <section class="colorlib-education" data-section="education">
-            <div class="colorlib-narrow-content">
-              <div
-                class="row row-bottom-padded-sm animate-box fadeInLeft animated"
-                data-animate-effect="fadeInLeft"
-              >
-                <div class="about-desc">
-                  <h1>Education</h1>
-                </div>
-              </div>
-              <div class="timeline-centered" id="education"></div>
-            </div>
-          </section>
-
-
-
-          <section class="colorlib-projects no-print" data-section="misc">
-            <div class="colorlib-narrow-content">
-               <div class="row row-bottom-padded-sm animate-box"
-                   data-animate-effect="fadeInLeft">
-                  <div class="about-desc">
-                     <h1>Miscellaneous</h1>
-                     <p>
-                        Some fun activities I had the opportunity to participate in!
-                     </p>
-                  </div>
-               </div>
-               
-               <ul id="misc-list" class=" animate-box" data-animate-effect="fadeInLeft" > </ul>
-            </div>
-         </section>
-
-
-
-          <section class="colorlib-contact" data-section="contact">
-            <div class="colorlib-narrow-content">
-              <div
-                class="row row-bottom-padded-sm animate-box"
-                data-animate-effect="fadeInLeft"
-              >
-                <div class="about-desc">
-                  <h1>Contact</h1>
-                </div>
-                <p>
-                  Feel free to email me at <strong>s.jimenez@unizar.es</strong> for tech
-                  discussions, business opportunities, or just to say hello—I’d
-                  love to hear from you!
-                </p>
-              </div>
-            </div>
-          </section>
-
-
-          <section class="colorlib-footer no-print" data-section="footer">
-            <div class="colorlib-narrow-content">
-              <footer class="footer" id="footer"></footer>
-            </div>
-          </section>
+      <a href="assets/data/cv/CV_SJ_Oct25.pdf" class="cv">
+        <i class="fas fa-file-alt" aria-hidden="true"></i>
+      </a>
         </div>
       </div>
+
+      <nav id="navbar" class="nav-menu navbar">
+        <ul>
+          <!-- <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li> -->
+          <li><a href="#about" class="nav-link scrollto"><i class="bi bi-person-vcard"></i> <span>About</span></a></li>
+          <li><a href="#publications" class="nav-link scrollto"><i class="bi bi-journals"></i> <span>Publications</span></a></li>
+          <li><a href="#resume" class="nav-link scrollto"><i class="bi bi-briefcase"></i> <span>Resume</span></a></li>
+          <!-- <li><a href="#education" class="nav-link scrollto"><i class="bi bi-mortarboard"></i> <span>Education</span></a></li> -->
+		      <li><a href="#miscellaneous" class="nav-link scrollto"><i class="bi bi-newspaper"></i> <span>Miscellaneous</span></a></li>
+          <li><a href="#contact" class="nav-link scrollto"><i class="bi bi-envelope-at"></i> <span>Contact</span></a></li>
+        </ul>
+      </nav><!-- .nav-menu -->
     </div>
-    <script src="js/jquery.min.js"></script>
-    <script src="js/jquery.waypoints.min.js"></script>
-    <script src="js/main.js"></script>
-  </body>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Santiago Jimenez Navarro</h2>
+          <p></p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4">
+            <img src="assets\data\images\profilepic.png" class="img-fluid rounded-circle" alt="">
+          </div>
+          <div class="col-lg-8 pt-4 pt-lg-0 content">
+            <h3>PhD Candidate in Computer Science</h3>
+            <p style="margin-bottom:0.5rem;">
+              Hi! I am Santiago, a PhD candidate in Computer Science at the <a href="https://graphics.unizar.es" target="_blank">Graphics and Imaging Lab</a> at
+              University of Zaragoza (Spain), working under the supervision of <a href="https://ana-serrano.github.io" target="_blank">Prof. Ana Serrano</a> and 
+              <a href="https://webdiis.unizar.es/~bmasia/" target="_blank">Prof. Belen Masia</a>. Previously, I obtained a BSc degree in Computer Science at 
+              University of Zaragoza, and a MSc in Robotics, Graphics and Computer Vision at the same University. 
+              <br/>
+              My research interests span in the intersection between Computer Graphics and Machine Learning, with a special focus in human perception. 
+              My non-academic interests include practicing sports and learning new skills!
+            <div class="row">
+              <div class="col-lg-6">
+                <ul>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Download my CV <a href="assets/data/cv/CV_SJ_Oct25.pdf">here</a></strong> </li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>	s.jimenez@unizar.es</span></li>
+                </ul>
+              </div>
+              <div class="col-lg-6">
+                <ul>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Location:</strong> <span>Zaragoza, Spain</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>ORCID:</strong> <span>0009-0004-7376-8894</span></li>
+                  <!-- <li><i class="bi bi-chevron-right"></i> <strong>Phone Office:</strong> <span>zzzz</span></li> -->
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= Facts Section ======= -->
+    <section id="publications" class="facts">
+      <div class="container">
+        <div class="section-title">
+          <h2>Publications</h2>
+          <!-- <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p> -->
+        </div>
+		<div class="publication-box">
+      <!-- <div class="publication-box-highlight"></div> -->
+          <div class="image">
+            <img src="assets/data/figures/matdisent_teaser_vertical.png" alt="teaser_matdisent">
+          </div>
+          <div class="details">
+            <h2 class="title">A Controllable Appearance Representation for Flexible Transfer and Editing</h2>
+            <p class="conference">Eurographics Symposium on Rendering (EGSR) 2025</p>
+            <p class="abstract">We present a method that computes an interpretable representation of material appearance within a highly compact, disentangled latent space. 
+              <!-- This representation is learned in a self-supervised fashion using a VAE-based model.  -->
+              We train our model with a carefully designed unlabeled dataset, avoiding possible biases induced by human-generated labels. 
+              Our model demonstrates strong disentanglement and interpretability by effectively encoding material appearance and illumination, despite the absence of explicit supervision. 
+              We leverage it for two proof-of-concept applications: image-based appearance transfer and editing, by conditioning a diffusion pipeline. 
+              <!-- Our representation is used to condition a diffusion pipeline that transfers the appearance of one or more images onto a target geometry, and allows the user to further edit the resulting appearance.  -->
+              This approach offers fine-grained control over the generated results: thanks to the well-structured compact latent space, users can intuitively manipulate attributes such as hue or glossiness in image space to achieve the desired final appearance. 
+            </p>
+            <p class="authors">
+              <strong>Santiago Jimenez-Navarro</strong>,
+              <a href="https://webdiis.unizar.es/~juliagv/">Julia Guerrero-Viu</a>,
+              <a href="https://webdiis.unizar.es/~bmasia/">Belen Masia</a>
+            </p>
+            <div class="links">
+              <a href="assets/data/papers/mat_disent_2025.pdf" class="pdf-button">Paper</a>
+              <a href="https://graphics.unizar.es/projects/mat_disentanglement_2025/" class="pdf-button">Project Page</a>
+              <a href="https://github.com/SantiagoJN/mat_disentanglement_2025" class="pdf-button">Code</a>
+              <a href="https://huggingface.co/datasets/SantiagoJN/mat_disent" class="pdf-button">Dataset</a>
+              <a href="https://nas-graphics.unizar.es/s/ZRCZfbEzw5Ba3p3" class="pdf-button">Pretrained Models</a>
+              <a href="https://diglib.eg.org/items/7057a4ad-2d5f-4555-8a46-29c482eed7a6" class="pdf-button">Publisher's Page</a>
+            </div>
+          </div>
+        </div>
+        
+        
+    </section>
+
+
+    <!-- ======= Skills Section ======= -->
+    <!-- <section id="skills" class="skills section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Skills</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        </div>
+
+        <div class="row skills-content">
+
+          <div class="col-lg-6" data-aos="fade-up">
+
+            <div class="progress">
+              <span class="skill">HTML <i class="val">100%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">CSS <i class="val">90%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">JavaScript <i class="val">75%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+
+            <div class="progress">
+              <span class="skill">PHP <i class="val">80%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">WordPress/CMS <i class="val">90%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill">Photoshop <i class="val">55%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>End Skills Section -->
+    
+	
+    <!-- ======= Resume Section ======= -->
+    <section id="resume" class="resume">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Resume</h2>
+          <p><!-- Rellenar --></p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6" data-aos="fade-up">
+            <h3 class="resume-title">Education</h3>
+            <div class="resume-item">
+              <h4>PhD in Computer Science</h4>
+              <h5>2024 - Present</h5>
+              <p>Supervised by <a href="https://ana-serrano.github.io"> Prof. Ana Serrano </a> and <a href="https://webdiis.unizar.es/~bmasia/"> Prof. Belen Masia </a>
+                in the <br/> <a href="http://graphics.unizar.es/">Graphics & Imaging Lab</a></p>
+              <p><em>Universidad de Zaragoza, Spain</em></p>
+              <p>Thesis titled Perceptually-informed Material Appearance Modeling and Editing</p>
+            </div>
+            <div class="resume-item">
+              <h4>Master in Robotics, Graphics and Computer Vision</h4>
+              <h5>2022 - 2024</h5>
+              <p><em>Universidad de Zaragoza, Spain</em></p> 
+              <p>Master thesis, titled <a href="https://deposita.unizar.es/TAZ/EINA/2024/79880/TAZ-TFM-2024-038.pdf">
+                  Learning Interpretable Representations of Material appearance</a>, funded by a competitive scholarship from
+                  the Aragon Institute for Engineering Research (I3A), and graded with a 9.5/10 with honors</p>
+            </div>
+            <div class="resume-item">
+              <h4>BSc in Computer Science</h4>
+              <h5>2018 - 2022</h5>
+              <p><em>Universidad de Zaragoza, Spain</em></p>
+              <p>Final degree project, titled <a href="https://deposita.unizar.es/TAZ/EINA/2022/68541/TAZ-TFG-2022-2243.pdf">
+                  Audiovisual Saliency Prediction in 360º Content</a>, graded with a 9.6/10, and awarded by the
+                  Santander Bank as the third best in the field of engineering and architecture</p>
+            </div>
+          </div>
+
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="resume-title">Experience</h3>
+
+              <div class="resume-item">
+                <h4>Machine Learning Summer School</h4>
+                <h5>June 2025</h5>
+                <p><em>Castiglione della Pescaia, Tuscany, Italy </em></p>
+                <ul>
+                  <li> 
+                    Attended the 8th Advanced Course on Data Science & Machine Learning (<a href="https://acdl2025.icas.events/">ACDL 2025</a>) summer school, 
+                    with lecturers from institutions such as Princeton University, Google DeepMind, EPFL, Stanford University, or Google Research
+                  </li>
+                  <li>
+                    Course equivalent to 8 ECTS points
+                  </li>
+                </ul>
+              </div>
+
+              <div class="resume-item">
+                <h4>MSc Research Internship</h4>
+                <h5>February 2023 - June 2023</h5>
+                <p><em>Graphics and Imaging Lab, Zaragoza, Spain </em></p>
+                <ul>
+                  <li> Internship on the subject of Disentangled latent representations of material appearance with unsupervised learning, supervised
+                      by <a href="http://webdiis.unizar.es/~juliagv/">Dr. Julia Guerrero-Viu</a> and 
+                      <a href="http://webdiis.unizar.es/~bmasia/">Prof. Belen Masia</a> </li>
+                </ul>
+              </div>
+              
+              <div class="resume-item">
+                <h4>BSc Research Internship</h4>
+                <h5>December 2021 - March 2022</h5>
+                <p><em>Graphics and Imaging Lab, Zaragoza, Spain </em></p>
+                <ul>
+                  <li> Internship on the subject of Audiovisual saliency prediction in 360º content, supervised
+                      by <a href="https://webdiis.unizar.es/~danims/">Prof. Daniel Martin</a> and 
+                      <a href="https://ana-serrano.github.io">Prof. Ana Serrano</a> </li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+
+
+
+
+          <div class="row">
+          <div class="col-lg-6" data-aos="fade-up">
+            <h3 class="resume-title">Supervision</h3>
+            <div class="resume-item">
+              <h4>Measuring material appearance similarity: Analysis of a learning-based metric</h4>
+              <h5>2025</h5>
+              <p><em>Ming Tao Ye - BSc in Computer Science</em></p>
+              <p>BSc Thesis graded 9.7/10 with honors</p>
+            </div>
+          </div>
+
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="resume-title">Reviewer</h3>
+
+              <div class="resume-item">
+                <h4>Eurographics</h4>
+                <h5>2026</h5>
+              </div>
+
+            </div>
+          </div>
+
+
+        </div>
+
+      </div>
+    </section><!-- End Resume Section -->
+	
+    <section id="miscellaneous" class="resume">
+        <div class="container" data-aos="fade-up">
+          <div class="section-title">
+            <h2>Miscellaneous</h2>
+          </div>
+        
+
+          <div class="resume-item-new">
+            <div class="box">
+              <div class="image-container">
+                <img class="compressed-image" src="assets/data/misc/egsr_talk_2025.jpg" alt="Image">
+              </div>
+              <div class="content">
+                <h3>Presentation of our paper at EGSR 2025</h3>
+                <h5date>June 2025</h5date>
+                <div class="details-new">
+                  <p> 
+                    It was a pleasure to present our paper <a href="https://graphics.unizar.es/projects/mat_disentanglement_2025/">
+                    A Controllable Appearance Representation for 
+                    Flexible Transfer and Editing</a> at Eurographics Symposium on Rendering 2025 (EGSR 2025).
+                    It was a great first step in my research career, and fantastic opportunity to share our findings with 
+                    the rendering community, receive valuable feedback and engage in inspiring discussions with other researchers.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="resume-item-new">
+            <div class="box">
+              <div class="image-container">
+                <img class="compressed-image" src="assets/data/misc/acdl2025.jpg" alt="Image">
+              </div>
+              <div class="content">
+                <h3>Machine Learning Summer School</h3>
+                <h5date>June 2025</h5date>
+                <div class="details-new">
+                  <p> 
+                    I had the great chance to participate in <a href="https://acdl2025.icas.events/">ACDL 2025</a> (8th Advanced Course on Data Science & Machine Learning) summer school.
+                    It was a wonderful experience to learn from leading researchers in the field and to exchange ideas with participants from 
+                    all over the world. The lectures and discussions covered a wide range of exciting topics, offering valuable insights into 
+                    current trends and challenges in AI.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="resume-item-new">
+            <div class="box">
+              <div class="image-container">
+                <img class="compressed-image" src="assets/data/misc/ResearchersNight2024.jpg" alt="Image">
+              </div>
+              <div class="content">
+                <h3>European Researchers' Night</h3>
+                <h5date>September 2024</h5date>
+                <div class="details-new">
+                  <p> I had the great chance to participate in the 
+                    <a href="https://ucc.unizar.es/noche-investigadores-2024/la-noche-europea-de-los-investigadores-e-investigadoras">European 
+                    Researchers' Night</a> alongside my colleagues from the <a href="http://graphics.unizar.es/">Graphics and Imaging Lab</a>. 
+                    During this public event, we shared our research with people of all ages, explaining the exciting work carried out by different 
+                    research groups at the university. In our case, we explored topics such as visual illusions and computer-generated imagery.
+                    It was a great experience to bring research closer to the public and spark curiosity about these topics!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="resume-item-new">
+            <div class="box">
+              <div class="image-container">
+                <img class="compressed-image" src="assets/data/misc/JJI24-photo.jpg" alt="Image">
+              </div>
+              <div class="content">
+                <h3>Young Researchers' Day</h3>
+                <h5date>June 2024</h5date>
+                <div class="details-new">
+                  <p> During the <a href="https://i3a.unizar.es/es/eventos/v-jornada-del-i3a-xiii-jornada-de-jovenes-investigadoresas">Young Researchers' Day</a> 
+                    at the Aragon Institute for Engineering Research (I3A), I presented my poster on <em>Aprendizaje no Supervisado de Representaciones 
+                    Interpretables y Desenredadas de la Apariencia de Materiales</em>. Sharing opinions and discussing with fellow researchers with 
+                    great experience in their fields allowed me to gain a new perspective about my work!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="resume-item-new">
+            <div class="box">
+              <div class="image-container">
+                <img class="compressed-image" src="assets/data/misc/tfg_award_2022.jpg" alt="Image">
+                <!-- https://catbs.unizar.es/articulos/entrega-de-los-premios-santander-correspondientes-al-ano-2022 -->
+              </div>
+              <div class="content">
+                <h3>Santander Bank Award to BSc Thesis</h3>
+                <h5date>September 2023</h5date>
+                <div class="details-new">
+                  <p> I received the third prize for Best BSc Thesis (TFG) in Engineering and Architecture, awarded by Santander Bank 
+                    — a meaningful recognition of the effort and work behind my bachelor's project. Full text is available (in Spanish) 
+                    <a href="https://deposita.unizar.es/TAZ/EINA/2022/68541/TAZ-TFG-2022-2243.pdf">here</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+    </section>
+
+
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Contact</h2>
+          <p>For any research inquiry, please do not hesitate to reach out!</p>
+        </div>
+
+        <div class="row" data-aos="fade-in">
+
+          <div class="col-lg-5 d-flex align-items-stretch">
+            <div class="info">
+              <div class="address">
+                <i class="bi bi-geo-alt"></i>
+                <h4>Location:</h4>
+                <p>C. Mariano Esquillor Gómez, s/n, 50018 Zaragoza</p>
+              </div>
+
+              <div class="email">
+                <i class="bi bi-envelope"></i>
+                <h4>Email:</h4>
+                <p>s.jimenez@unizar.es</p>
+              </div>
+			  
+			  <!-- <div class="phone">
+                <i class="bi bi-telephone"></i>
+                <h4>Phone Number:</h4>
+                <p>+49 681 9325 0</p>
+              </div> -->
+              
+            </div>
+
+          </div>
+
+          <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
+            <div style="text-decoration:none; overflow:hidden; height:100%; width:100%;max-width:100%;">
+				<iframe width="600" height="450" style="border:0" loading="lazy" allowfullscreen 
+				src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2979.685224946456!2d-0.8887509514735247!3d41.684141122291045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd59135d9d8942b3%3A0xa2fd5e66dd0a6120!2sInstituto%20de%20Investigaci%C3%B3n%20en%20Ingenier%C3%ADa%20de%20Arag%C3%B3n%20(I3A)!5e0!3m2!1ses!2ses!4v1761055553975!5m2!1ses!2ses">
+				</iframe>
+
+        <!-- <iframe  width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+            
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="copyright">
+        Adapted from <strong><span>iPortfolio</span></strong>
+      </div>
+      <div class="credits">
+        &copy; <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer> 
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script  defer src="assets/vendor/aos/aos.js"></script>
+  <script defer src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script   src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script defer src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script   src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script defer   src="assets/vendor/typed.js/typed.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script defer src="assets/js/main.js"></script>
+
+  <!-- Default Statcounter code for Personal webpage -->
+  <script type="text/javascript">
+  var sc_project=13177483; 
+  var sc_invisible=1; 
+  var sc_security="b1b5a823"; 
+  </script>
+  <script type="text/javascript"
+  src="https://www.statcounter.com/counter/counter.js"
+  async></script>
+  <noscript><div class="statcounter"><a title="Web Analytics
+  Made Easy - Statcounter" href="https://statcounter.com/"
+  target="_blank"><img class="statcounter"
+  src="https://c.statcounter.com/13177483/0/b1b5a823/1/"
+  alt="Web Analytics Made Easy - Statcounter"
+  referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+  <!-- End of Statcounter Code -->
+</body>
+
 </html>
