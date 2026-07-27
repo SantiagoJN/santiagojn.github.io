@@ -605,6 +605,23 @@ section {
   margin-bottom: 10px;
 }
 
+.resume .reviewer-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 16px;
+  padding-right: 0;
+}
+
+.resume .reviewer-item h4 {
+  margin-bottom: 0;
+}
+
+.resume .reviewer-item h5 {
+  margin-bottom: 0;
+  white-space: nowrap;
+}
+
 .resume .resume-item ul {
   padding-left: 20px;
 }
@@ -1427,6 +1444,16 @@ h5date {
 }
 
 @media screen and (max-width: 768px) {
+
+  .resume .reviewer-item {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .resume .reviewer-item h5 {
+    align-self: flex-end;
+  }
   .compressed-image {
     width: 40px;
   }
